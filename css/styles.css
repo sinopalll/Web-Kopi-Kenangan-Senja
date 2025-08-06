@@ -125,7 +125,7 @@ body {
 .shopping-cart {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -100%;
     width: 30rem;
     height: 100vh;
     padding: 0 1.5rem;
