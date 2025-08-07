@@ -226,11 +226,37 @@ body {
 }
 
 .about .row .about-img {
+    position: relative;
+    overflow: hidden;
     flex: 0 0 30rem;
 }
 
 .about .row .about-img img {
     width: 100%;
+}
+
+.about .row .about-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about .row .about-img::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .about .row .content {
@@ -255,6 +281,30 @@ body {
 }
 
 /* Menu Section */
+.menu {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 30%, transparent 70%, rgba(0, 0, 0, 1)) , url('../img/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.menu, .row, .menu h2, .menu p {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
 .menu h2, .contact h2, .products h2 {
     margin-bottom: 1rem;
 }
